@@ -269,3 +269,33 @@
 			"Teshari" = 'icons/map_assets/southern_cross/mob/species/teshari/sc_uniform.dmi'
 			)
 	starting_accessories = list(/obj/item/clothing/accessory/storage/webbing/pilot2)
+
+/obj/item/clothing/under/talon/evauniform
+	name = "Talon Uniform"
+	desc = "A sleek uniform bearing Talon colors, capable of safe EVA usage."
+	icon_state = "talon"
+	worn_state = "talon"
+	rolled_down = 0
+	rolled_sleeves = 0
+	armor = list(melee = 5, bullet = 0, laser = 0,energy = 5, bomb = 0, bio = 0, rad = 20)
+	allowed = list(/obj/item/flashlight,/obj/item/tank)
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS|FEET|HANDS
+	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS|HANDS|FEET
+	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
+	min_pressure_protection = 0 * ONE_ATMOSPHERE
+	max_pressure_protection = 10 * ONE_ATMOSPHERE
+	permeability_coefficient = 0
+/*
+/obj/item/clothing/shoes/boots/talonboots
+	name = "talon EVA boots"
+	desc = "Standard issue talon boots, EVA ready."
+	icon_state = "swat"
+	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 20)
+	item_flags = NOSLIP
+	siemens_coefficient = 0.2
+
+	cold_protection = FEET
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	heat_protection = FEET
+	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
+*/
