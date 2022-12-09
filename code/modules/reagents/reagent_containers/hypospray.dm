@@ -70,7 +70,7 @@
 
 	user.setClickCooldown(DEFAULT_QUICK_COOLDOWN)
 	to_chat(user, SPAN_NOTICE("You inject \the [H] with \the [src]."))
-	H.custom_pain(SPAN_WARNING("You feel a tiny prick!"), 1, TRUE)
+	to_chat(H, SPAN_WARNING( "You feel a tiny prick!"))
 
 	if(hyposound)
 		playsound(src, hyposound, 25)

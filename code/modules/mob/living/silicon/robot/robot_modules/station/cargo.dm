@@ -43,10 +43,7 @@
 /obj/item/robot_module/robot/quad_miner
 	name = "Mining Quadruped module"
 	sprites = list(
-					"F3-LINE" = "FELI-Mining",
-					"K-MINE" = "kmine",
-					"Cargo Hound" = "cargohound",
-					"Cargo Hound Dark" = "cargohounddark"
+					"F3-LINE" = "FELI-Mining"
 					)
 	channels = list("Supply" = 1)
 	can_be_pushed = 0

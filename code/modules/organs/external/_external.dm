@@ -415,7 +415,7 @@
 			else if(status == "cyborg")
 				var/robodata = owner.client.prefs.rlimb_data[organ_tag]
 				if(robodata)
-					robotize(robodata, null, null, TRUE)
+					robotize(robodata)
 				else
 					robotize()
 		owner.updatehealth()

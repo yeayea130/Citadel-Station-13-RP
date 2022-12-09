@@ -117,29 +117,29 @@ GLOBAL_LIST_BOILERPLATE(all_janitorial_carts, /obj/structure/janitorialcart)
 		switch(href_list["take"])
 			if("garbage")
 				if(mybag)
-					user.grab_item_from_interacted_with(mybag, src)
+					user.put_in_hands(mybag)
 					to_chat(user, "<span class='notice'>You take [mybag] from [src].</span>")
 					mybag = null
 			if("mop")
 				if(mymop)
-					user.grab_item_from_interacted_with(mymop, src)
+					user.put_in_hands(mymop)
 					to_chat(user, "<span class='notice'>You take [mymop] from [src].</span>")
 					mymop = null
 			if("spray")
 				if(myspray)
-					user.grab_item_from_interacted_with(myspray, src)
+					user.put_in_hands(myspray)
 					to_chat(user, "<span class='notice'>You take [myspray] from [src].</span>")
 					myspray = null
 			if("replacer")
 				if(myreplacer)
-					user.grab_item_from_interacted_with(myreplacer, src)
+					user.put_in_hands(myreplacer)
 					to_chat(user, "<span class='notice'>You take [myreplacer] from [src].</span>")
 					myreplacer = null
 			if("sign")
 				if(signs)
 					var/obj/item/caution/Sign = locate() in src
 					if(Sign)
-						user.grab_item_from_interacted_with(Sign, src)
+						user.put_in_hands(Sign)
 						to_chat(user, "<span class='notice'>You take \a [Sign] from [src].</span>")
 						signs--
 					else
@@ -207,7 +207,8 @@ GLOBAL_LIST_BOILERPLATE(all_janitorial_carts, /obj/structure/janitorialcart)
 
 /obj/structure/bed/chair/janicart/attack_hand(mob/user)
 	if(mybag)
-		user.grab_item_from_interacted_with(mybag, src)
+		if(!user.put_in_hands(mybag))
+			mybag.forceMove(user.drop_location())
 		mybag = null
 	else
 		..()

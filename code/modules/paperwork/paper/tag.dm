@@ -29,7 +29,7 @@ GLOBAL_LIST(paired_paper_tag_lookup)
 	//? parse paired tag via regex (uh oh overhead maybe we'll rust it someday)
 	// simple parser for paired tags
 	var/static/regex/R = regex("(\\\[/?\[a-z\]+=?\[a-z\]*\\\])")
-	var/list/parsed = splittext_char(., R)
+	var/list/parsed = splittext_char(str, R)
 	var/parsed_length = length(parsed)
 	if(parsed_length == 1)
 		return parsed[1]
@@ -71,6 +71,7 @@ GLOBAL_LIST(paired_paper_tag_lookup)
 		parsed += PT.replace_auto_close(user, src, T, param)
 	return parsed.Join("")
 
+
 /**
  * datumized paper tag system ~silicons
  *
@@ -105,7 +106,7 @@ GLOBAL_LIST(paired_paper_tag_lookup)
  * T can be null
  */
 /datum/paper_tag/single/proc/transform_string(str, mob/user, obj/item/paper/P, obj/item/pen/T)
-	return replacetext(str, cached_replace_query, replace_with(user, P, T))
+	return str
 
 /**
  * user can be null
@@ -114,6 +115,9 @@ GLOBAL_LIST(paired_paper_tag_lookup)
  */
 /datum/paper_tag/single/proc/replace_with(mob/user, obj/item/paper/P, obj/item/pen/T)
 	return ""
+
+/datum/paper_tag/single/transform_string(str, mob/user, obj/item/paper/P, obj/item/pen/T)
+	return replacetext(str, cached_replace_query, replace_with(user, P, T))
 
 /datum/paper_tag/single/current_time
 	tagname = "time"

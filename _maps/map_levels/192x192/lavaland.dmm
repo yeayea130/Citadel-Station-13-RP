@@ -38,12 +38,16 @@
 /turf/simulated/floor/outdoors/lavaland,
 /area/lavaland/central/explored)
 "ci" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/camera/network/mining{
-	dir = 8
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "wind_orange"
 	},
-/turf/simulated/floor/tiled,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor{
+	req_one_access = list(48)
+	},
+/turf/simulated/floor/plating,
 /area/lavaland/central/base/common)
 "cj" = (
 /turf/simulated/floor/tiled/dark/lavaland,
@@ -71,9 +75,6 @@
 	},
 /obj/structure/closet/firecloset,
 /obj/structure/closet/firecloset,
-/obj/machinery/camera/network/mining{
-	dir = 6
-	},
 /turf/simulated/floor/plating,
 /area/lavaland/central/base/common)
 "db" = (
@@ -435,9 +436,6 @@
 	dir = 1;
 	target_pressure = 15000
 	},
-/obj/machinery/camera/network/mining{
-	dir = 4
-	},
 /turf/simulated/floor/plating,
 /area/lavaland/central/base/common)
 "ki" = (
@@ -560,9 +558,6 @@
 	power_rating = 20000
 	},
 /obj/map_helper/airlock/atmos/chamber_pump,
-/obj/machinery/camera/network/mining{
-	dir = 1
-	},
 /turf/simulated/floor/plating,
 /area/lavaland/central/base/common)
 "mm" = (
@@ -581,8 +576,15 @@
 /turf/simulated/floor/plating,
 /area/lavaland/central/base/common)
 "mq" = (
-/obj/structure/table/steel,
-/turf/simulated/floor/tiled,
+/obj/machinery/door/firedoor{
+	req_one_access = list(48)
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
 /area/lavaland/central/base/common)
 "mr" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -910,9 +912,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/camera/network/mining{
-	dir = 8
-	},
 /turf/simulated/floor/plating,
 /area/lavaland/central/base/common)
 "qU" = (
@@ -975,10 +974,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -28
+	},
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/apc/high/south_bump,
 /turf/simulated/floor/plating,
 /area/lavaland/central/base/common)
 "sx" = (
@@ -992,30 +994,14 @@
 	},
 /turf/simulated/floor/outdoors/lava/lavaland,
 /area/lavaland/central/explored)
-"sH" = (
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1384;
-	id_tag = "mining_outpost";
-	pixel_y = 25;
+"sJ" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor{
 	req_one_access = list(48)
 	},
-/turf/simulated/floor/tiled,
-/area/lavaland/central/base/common)
-"sJ" = (
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 10
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 9
-	},
-/obj/machinery/shower{
-	dir = 1
-	},
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 8
-	},
-/obj/structure/curtain/open/shower/engineering,
-/turf/simulated/floor/tiled/white,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
 /area/lavaland/central/base/common)
 "sN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -1062,9 +1048,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 1
 	},
-/obj/machinery/camera/network/mining{
-	dir = 5
-	},
 /turf/simulated/floor/tiled,
 /area/lavaland/central/base/common)
 "sV" = (
@@ -1088,9 +1071,16 @@
 /turf/simulated/floor/tiled,
 /area/lavaland/central/base/common)
 "te" = (
-/obj/structure/sign/warning/lava,
-/turf/simulated/wall/r_wall,
-/area/lavaland/central/explored)
+/obj/structure/grille,
+/obj/machinery/door/firedoor{
+	req_one_access = list(48)
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/lavaland/central/base/common)
 "tn" = (
 /obj/structure/sink{
 	dir = 8;
@@ -1159,10 +1149,6 @@
 /obj/machinery/vending/coffee,
 /obj/machinery/light/small{
 	dir = 4
-	},
-/obj/machinery/camera/network/mining{
-	c_tag = "OPM - Mining Production Room";
-	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/lavaland/central/base/common)
@@ -1449,9 +1435,6 @@
 /area/lavaland/central/base/common)
 "zt" = (
 /obj/machinery/vending/fitness,
-/obj/machinery/camera/network/mining{
-	dir = 8
-	},
 /turf/simulated/floor/tiled,
 /area/lavaland/central/base/common)
 "zv" = (
@@ -1468,9 +1451,6 @@
 	},
 /mob/living/simple_mob/animal/passive/mouse/gray{
 	name = "Jerry"
-	},
-/obj/machinery/camera/network/mining{
-	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/lavaland/central/base/common)
@@ -1549,7 +1529,14 @@
 /turf/simulated/floor/tiled,
 /area/lavaland/central/base/common)
 "BY" = (
-/obj/spawner/window/reinforced/full/firelocks,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor{
+	req_one_access = list(48)
+	},
 /obj/structure/curtain/black,
 /turf/simulated/floor/plating,
 /area/lavaland/central/base/common)
@@ -1608,10 +1595,6 @@
 "DG" = (
 /turf/simulated/floor/outdoors/lava/lavaland,
 /area/lavaland/central/explored)
-"DW" = (
-/obj/structure/sign/warning/lava,
-/turf/simulated/wall/r_wall,
-/area/lavaland/central/base/common)
 "Em" = (
 /obj/machinery/door/firedoor/multi_tile{
 	req_one_access = list(48)
@@ -1747,11 +1730,15 @@
 /turf/simulated/floor/plating,
 /area/lavaland/central/base/common)
 "Il" = (
-/obj/machinery/camera/network/mining{
-	dir = 4
+/obj/machinery/door/firedoor{
+	req_one_access = list(48)
 	},
-/obj/machinery/washing_machine,
-/turf/simulated/floor/tiled,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
 /area/lavaland/central/base/common)
 "Iq" = (
 /obj/machinery/light/small{
@@ -1849,13 +1836,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/lavaland/central/base/common)
-"KZ" = (
-/obj/machinery/mech_recharger,
-/obj/machinery/camera/network/mining{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/lavaland/central/base/common)
 "La" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -1943,13 +1923,15 @@
 /turf/simulated/floor/tiled,
 /area/lavaland/central/base/common)
 "NH" = (
-/obj/machinery/airlock_sensor{
-	dir = 1;
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	frequency = 1384;
 	id_tag = "mining_outpost";
-	pixel_y = -25
+	pixel_y = 25;
+	req_one_access = list(48)
 	},
-/obj/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/lavaland/central/base/common)
 "NN" = (
@@ -1969,7 +1951,15 @@
 /turf/simulated/floor/plating,
 /area/lavaland/central/base/common)
 "NW" = (
-/obj/spawner/window/reinforced/full/firelocks,
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "wind_blue"
+	},
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor{
+	req_one_access = list(48)
+	},
 /turf/simulated/floor/plating,
 /area/lavaland/central/base/common)
 "Ob" = (
@@ -2186,9 +2176,21 @@
 /turf/simulated/mineral/triumph/lavaland,
 /area/lavaland/central/unexplored)
 "Sa" = (
-/obj/machinery/camera/network/mining{
-	dir = 1
+/obj/machinery/airlock_sensor{
+	dir = 1;
+	frequency = 1384;
+	id_tag = "mining_outpost";
+	pixel_y = -25
 	},
+/obj/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/light/small,
+/obj/machinery/atmospherics/component/unary/vent_pump/high_volume{
+	dir = 1;
+	frequency = 1384;
+	id_tag = "mining_outpost";
+	power_rating = 20000
+	},
+/obj/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled,
 /area/lavaland/central/base/common)
 "Sm" = (
@@ -2354,9 +2356,6 @@
 /area/lavaland/central/base/common)
 "Vw" = (
 /obj/structure/flora/pottedplant/subterranean,
-/obj/machinery/camera/network/mining{
-	dir = 1
-	},
 /turf/simulated/floor/tiled,
 /area/lavaland/central/base/common)
 "VA" = (
@@ -2392,6 +2391,8 @@
 /turf/simulated/floor/tiled,
 /area/lavaland/central/base/common)
 "VT" = (
+/obj/structure/table/rack,
+/obj/item/storage/bag/ore,
 /obj/structure/sign/warning{
 	desc = "Warning: The PMD has confirmed multiple Memetic Hazards in this area. Please wear the appropriate protection.";
 	name = "\improper MEMETIC HAZARD";
@@ -2400,23 +2401,17 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/item/gun/energy/kinetic_accelerator,
 /turf/simulated/floor/tiled,
 /area/lavaland/central/base/common)
 "VX" = (
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 10
+/obj/machinery/door/firedoor{
+	req_one_access = list(48)
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 9
-	},
-/obj/structure/window/reinforced/tinted/frosted{
-	dir = 4
-	},
-/obj/machinery/shower{
-	dir = 1
-	},
-/obj/structure/curtain/open/shower/engineering,
-/turf/simulated/floor/tiled/white,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
 /area/lavaland/central/base/common)
 "VY" = (
 /obj/machinery/light/small{
@@ -2489,11 +2484,15 @@
 /turf/simulated/floor/tiled,
 /area/lavaland/central/base/common)
 "Wv" = (
-/obj/item/geiger,
-/obj/item/geiger,
-/obj/item/geiger,
-/obj/structure/table/steel,
-/turf/simulated/floor/tiled,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor{
+	req_one_access = list(48)
+	},
+/turf/simulated/floor/plating,
 /area/lavaland/central/base/common)
 "Wy" = (
 /obj/structure/flora/pottedplant/smalltree{
@@ -8890,11 +8889,11 @@ DG
 gy
 gy
 AO
-NW
-NW
+Wv
+Wv
 AO
 AO
-NW
+ci
 AO
 MX
 MX
@@ -9863,7 +9862,7 @@ db
 ew
 YJ
 eM
-NW
+VX
 MX
 MX
 MX
@@ -10057,7 +10056,7 @@ ew
 ew
 Zh
 VC
-NW
+VX
 MX
 MX
 MX
@@ -10251,7 +10250,7 @@ ew
 ew
 Zw
 Cg
-NW
+VX
 MX
 MX
 MX
@@ -10445,7 +10444,7 @@ db
 ew
 YJ
 ut
-NW
+VX
 MX
 MX
 MX
@@ -11017,7 +11016,7 @@ AO
 AO
 AO
 Bp
-Sa
+ew
 db
 FI
 db
@@ -11805,7 +11804,7 @@ zE
 oX
 YS
 ew
-NW
+sJ
 MX
 MX
 gy
@@ -11974,7 +11973,7 @@ Cq
 WX
 Ki
 AO
-DW
+AO
 QA
 lF
 AO
@@ -11999,7 +11998,7 @@ vX
 bH
 uh
 ew
-NW
+VX
 MX
 gy
 gy
@@ -12193,7 +12192,7 @@ ce
 KG
 Ro
 ew
-NW
+sJ
 gy
 gy
 MX
@@ -12383,7 +12382,7 @@ ew
 Vw
 AO
 WZ
-ci
+QR
 xh
 VD
 SL
@@ -12574,7 +12573,7 @@ db
 HA
 Mw
 ew
-ew
+VA
 AO
 AO
 AO
@@ -12770,8 +12769,8 @@ Mw
 ew
 VT
 AO
-KZ
-ew
+AO
+xf
 tU
 xV
 AO
@@ -12952,9 +12951,9 @@ MX
 MX
 MX
 AO
-NW
-NW
-NW
+te
+te
+mq
 AO
 gy
 gy
@@ -12964,8 +12963,8 @@ MV
 RE
 AO
 AO
+AO
 xf
-ew
 Pv
 Ob
 AO
@@ -13152,17 +13151,17 @@ gy
 gy
 gy
 gy
-NW
+gy
 Il
 ND
 RJ
 VX
-AO
+gy
+Il
 Kj
-ew
 ub
 Iy
-NW
+VX
 gy
 gy
 MX
@@ -13346,17 +13345,17 @@ gy
 MX
 MX
 gy
+gy
 AO
-sH
-ND
-Sm
 NH
+Sa
 AO
-Wv
-VA
-VA
+gy
+AO
+te
+te
 mq
-NW
+AO
 MX
 gy
 MX
@@ -13540,17 +13539,17 @@ MX
 MX
 MX
 MX
-NW
-PZ
+gy
+Il
 NN
 Sm
-sJ
-AO
-AO
-AO
-NW
-NW
-AO
+VX
+gy
+gy
+gy
+gy
+gy
+MX
 MX
 MX
 MX
@@ -13734,12 +13733,12 @@ MX
 MX
 MX
 MX
-AO
+gy
 AO
 NV
 Ss
 AO
-AO
+gy
 gy
 gy
 gy
@@ -14128,7 +14127,7 @@ gy
 gy
 gy
 gy
-te
+MX
 MX
 MX
 MX

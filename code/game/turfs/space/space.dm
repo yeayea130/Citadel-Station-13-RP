@@ -23,7 +23,7 @@
 	return
 
 /turf/space/Initialize(mapload)
-	icon_state = SPACE_ICON_STATE(x, y, z)
+	icon_state = "[((x + y) ^ ~(x * y) + z) % 25]"
 
 	// We might be an edge
 	if(y == world.maxy || forced_dirs & NORTH)
